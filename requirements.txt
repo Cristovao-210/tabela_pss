@@ -1,2 +1,3 @@
 pdfminer.six
 tabula-py
+streamlib
