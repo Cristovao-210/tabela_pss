@@ -119,7 +119,7 @@ def gerar_tabela_pss(nome_arq, arquivo_pdf):
   ano_arquivo = captura_ano(texto_arquivo)
   ano = ano_arquivo
   # Gerando cabeçalho do arquivo
-  cabecalho_tabela(nome_arq[:-4])
+  cabecalho_tabela(nome_arq)
   # percorrendo tabelas
   for ind, tab in enumerate(tabela):
     # retirando coluna desnecessária
