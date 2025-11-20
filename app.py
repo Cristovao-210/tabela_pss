@@ -122,24 +122,24 @@ def gerar_tabela_pss(nome_arq, arquivo_pdf):
   cabecalho_tabela(nome_arq[:-4])
   # percorrendo tabelas
   for ind, tab in enumerate(tabela):
-  # retirando coluna desnecessária
-  tabela[ind] = tabela[ind].drop(columns=["Unnamed: 1", "REMUN.INFORMADA", "REMUN.REAJUSTADA"])
-
-  # Mudando nome das colunas (CABEÇALHO DA TABELA)
-  tabela[ind].columns = ['MES', 'REMUN.CONSIDERADA']
-
-  # dicionário para guardar os dados
-  dados_pss = []
-
-  # colocando as demais linhas dentro da lista
-  for row in range(13):
-    dados_pss.append([tabela[ind]['MES'][row].replace(":",""), tabela[ind]["REMUN.CONSIDERADA"][row]])
-
-  # inserindo informações na tabela
-  corpo_tabela(dados_pss)
-
-  # incrementando o ano
-  ano = int(ano) + 1
+    # retirando coluna desnecessária
+    tabela[ind] = tabela[ind].drop(columns=["Unnamed: 1", "REMUN.INFORMADA", "REMUN.REAJUSTADA"])
+  
+    # Mudando nome das colunas (CABEÇALHO DA TABELA)
+    tabela[ind].columns = ['MES', 'REMUN.CONSIDERADA']
+  
+    # dicionário para guardar os dados
+    dados_pss = []
+  
+    # colocando as demais linhas dentro da lista
+    for row in range(13):
+      dados_pss.append([tabela[ind]['MES'][row].replace(":",""), tabela[ind]["REMUN.CONSIDERADA"][row]])
+  
+    # inserindo informações na tabela
+    corpo_tabela(dados_pss)
+  
+    # incrementando o ano
+    ano = int(ano) + 1
 
   # fechando a parte final do arquivo e fazendo download
   fechamento_tabela(nome_arq[:-4])
