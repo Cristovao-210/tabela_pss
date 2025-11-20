@@ -136,7 +136,7 @@ def gerar_tabela_pss(nome_arq, arquivo_pdf):
       dados_pss.append([tabela[ind]['MES'][row].replace(":",""), tabela[ind]["REMUN.CONSIDERADA"][row]])
   
     # inserindo informações na tabela
-    corpo_tabela(dados_pss)
+    corpo_tabela(dados_pss, ano, nome_arq)
   
     # incrementando o ano
     ano = int(ano) + 1
