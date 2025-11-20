@@ -156,7 +156,7 @@ def gerar_tabela_pss(nome_arq, arquivo_pdf):
 # solicitando o carregamento do arquivo
 uploaded_file = st.file_uploader("Selecionar arquivo:")  
 if uploaded_file is not None:
-  gerar_tabela_pss(uploaded_file.name, uploaded_file
+  gerar_tabela_pss(uploaded_file.name, uploaded_file)
   opcao = st.selectbox("Selecione a ação necessária", ["", "Gerar HTML"])
   if opcao == "Gerar HTML":
     baixar_arquivos(f'{uploaded_file.name}.html')
