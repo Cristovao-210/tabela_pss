@@ -15,6 +15,12 @@ st.markdown('''
 def limpa_tela():
    return
 
+def reset_app():
+    st.session_state.clear()
+    st.cache_data.clear()
+    st.cache_resource.clear()
+    st.rerun()
+
 def cabecalho_tabela(nome_pdf):
   with open(f"{nome_pdf}.html", "w", encoding="utf-8") as pss:
     pss.write(f'''
@@ -97,7 +103,7 @@ def baixar_arquivos(nome_do_arq):
         st.error("ARQUIVO NÃO LOCALIZADO! REPITA O PROCESSO.")
  
       os.remove(nome_do_arq)
-      st.rerun()
+      reset_app()
 
 # limpar console
 def limpa_tela():
