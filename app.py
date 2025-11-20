@@ -19,7 +19,7 @@ def reset_app():
     st.session_state.clear()
     st.cache_data.clear()
     st.cache_resource.clear()
-    st.rerun()
+    
 
 def cabecalho_tabela(nome_pdf):
   with open(f"{nome_pdf}.html", "w", encoding="utf-8") as pss:
