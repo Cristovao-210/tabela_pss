@@ -97,6 +97,7 @@ def baixar_arquivos(nome_do_arq):
         st.error("ARQUIVO NÃO LOCALIZADO! REPITA O PROCESSO.")
  
       os.remove(nome_do_arq)
+      st.rerun()
 
 # limpar console
 def limpa_tela():
@@ -150,6 +151,6 @@ def gerar_tabela_pss(nome_arq, arquivo_pdf):
 uploaded_file = st.file_uploader("Selecionar arquivo:")  
 if uploaded_file is not None:
   gerar_tabela_pss(uploaded_file.name, uploaded_file)
-  st.rerun()
+  
   
  
