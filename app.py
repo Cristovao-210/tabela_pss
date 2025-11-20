@@ -142,8 +142,8 @@ def gerar_tabela_pss(nome_arq, arquivo_pdf):
     ano = int(ano) + 1
 
   # fechando a parte final do arquivo e fazendo download
-  fechamento_tabela(nome_arq[:-4])
-  baixar_arquivos(f'{nome_arq[:-4]}.html')
+  fechamento_tabela(nome_arq)
+  baixar_arquivos(f'{nome_arq}.html')
   
 
 # solicitando o carregamento do arquivo
