@@ -150,13 +150,14 @@ def gerar_tabela_pss(nome_arq, arquivo_pdf):
 
   # fechando a parte final do arquivo e fazendo download
   fechamento_tabela(nome_arq)
-  baixar_arquivos(f'{nome_arq}.html')
+  
   
 
 # solicitando o carregamento do arquivo
 uploaded_file = st.file_uploader("Selecionar arquivo:")  
 if uploaded_file is not None:
   gerar_tabela_pss(uploaded_file.name, uploaded_file)
+  baixar_arquivos(f'{uploaded_file.name[:-4}.html')
   
   
  
